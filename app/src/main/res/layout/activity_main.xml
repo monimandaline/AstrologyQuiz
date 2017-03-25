@@ -28,71 +28,12 @@
              android:hint="@string/user_name_hint" />
 
 
-        <!-- Question 06  -->
-
-        <TextView
-            style="@style/q06_header"
-            android:text="@string/question_06"
-            />
-
-        <RadioGroup
-            android:id="@+id/q06_radiogroup"
-            android:scaleType="centerCrop"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingLeft="16sp"
-            android:paddingRight="16sp"
-            android:paddingTop="16sp"
-            android:layout_marginBottom="16dp">
-
-            <GridLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                >
-            <RadioButton
-                style="@style/q06_RadioButton"
-                android:id="@+id/q06_btn_1"
-                android:layout_row="0"
-                android:layout_column="0"
-                android:onClick="Answer06_Click_RadioGroup_Simulation"
-                android:text="@string/q06a"/>
-
-            <RadioButton
-                style="@style/q06_RadioButton"
-                android:id="@+id/q06_btn_2"
-                android:layout_row="0"
-                android:layout_column="1"
-                android:onClick="Answer06_Click_RadioGroup_Simulation"
-                android:text="@string/q06b"
-                />
-
-            <RadioButton
-                android:id="@+id/q06_Answer"
-                style="@style/q06_RadioButton"
-                android:layout_row="1"
-                android:layout_column="0"
-                android:onClick="Answer06_Click_RadioGroup_Simulation"
-                android:text="@string/q06c" />
-
-            <RadioButton
-                style="@style/q06_RadioButton"
-                android:id="@+id/q06_btn_4"
-                android:layout_row="1"
-                android:layout_column="1"
-                android:onClick="Answer06_Click_RadioGroup_Simulation"
-                android:text="@string/q06d" />
-
-            </GridLayout>
-        </RadioGroup>
-
-
         <!-- Question 01  -->
-
         <TextView
             style="@style/q01_header"
             android:text="@string/question_01"
-             />
+            android:id="@+id/textView"
+            android:layout_width="match_parent" />
 
         <RadioGroup
             android:id="@+id/q01_radiogroup"
@@ -308,7 +249,64 @@
             </GridLayout>
         </RadioGroup>
 
+        <!-- Question 06  -->
 
+        <TextView
+            style="@style/q06_header"
+            android:text="@string/question_06"
+            />
+
+        <RadioGroup
+            android:id="@+id/q06_radiogroup"
+            android:scaleType="centerCrop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="0sp"
+            android:paddingRight="0sp"
+            android:paddingTop="8sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp">
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <RadioButton
+                    style="@style/q06_RadioButton"
+                    android:id="@+id/q06_btn_1"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:onClick="Answer06_Click_RadioGroup_Simulation"
+                    android:text="@string/q06a"/>
+
+                <RadioButton
+                    style="@style/q06_RadioButton"
+                    android:id="@+id/q06_btn_2"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:onClick="Answer06_Click_RadioGroup_Simulation"
+                    android:text="@string/q06b"
+                    />
+
+                <RadioButton
+                    android:id="@+id/q06_Answer"
+                    style="@style/q06_RadioButton"
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    android:onClick="Answer06_Click_RadioGroup_Simulation"
+                    android:text="@string/q06c" />
+
+                <RadioButton
+                    style="@style/q06_RadioButton"
+                    android:id="@+id/q06_btn_4"
+                    android:layout_row="1"
+                    android:layout_column="1"
+                    android:onClick="Answer06_Click_RadioGroup_Simulation"
+                    android:text="@string/q06d" />
+
+            </GridLayout>
+        </RadioGroup>
 
 
 
