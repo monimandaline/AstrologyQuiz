@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.android.astrologyquiz.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/name"
+            android:text="@string/user_name" />
+
+
+        <!-- Questions  -->
+        <EditText
+            style="@style/user_name"
+            android:id="@+id/user_name"
+             android:hint="@string/user_name_hint" />
+
+        <!-- Question 01  -->
+
+        <TextView
+            style="@style/q01_header"
+            android:text="@string/question_01"
+             />
+
+        <RadioGroup
+            android:id="@+id/q01_radiogroup"
+            android:scaleType="centerCrop"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:orientation="vertical"
+            android:paddingLeft="16sp"
+            android:paddingRight="16sp"
+            android:paddingTop="16sp">
+
+            <RadioButton
+                android:id="@+id/q01_Answer"
+                style="@style/q01_RadioButton"
+                android:text="@string/q01a"/>
+
+            <RadioButton
+                style="@style/q01_RadioButton"
+                android:text="@string/q01b"
+                />
+
+            <RadioButton
+                style="@style/q01_RadioButton"
+                android:text="@string/q01c" />
+
+            <RadioButton
+                style="@style/q01_RadioButton"
+                android:text="@string/q01d" />
+        </RadioGroup>
+
+        <!-- Question 02  -->
+
+        <TextView
+            style="@style/q02_header"
+            android:text="@string/question_02" />
+
+        <EditText
+            style="@style/q02_edittext"
+            android:id="@+id/q02_answer"
+            android:hint="@string/q02_hint"
+             />
+
+        <TextView
+            style="@style/help_text"
+            android:text="@string/help_text_q2" />
+
+        <!-- Question 03  -->
+
+        <TextView
+            style="@style/q03_header"
+            android:text="@string/question_03" />
+
+        <CheckBox
+            style="@style/q03_checkbox"
+            android:id="@+id/q03_Answer_a"
+            android:text="@string/q03a"
+            android:button="@drawable/checkbox_green"/>
+
+        <CheckBox
+            style="@style/q03_checkbox"
+            android:id="@+id/q03_Answer_b"
+            android:text="@string/q03b"
+            android:button="@drawable/checkbox_green"/>
+
+        <CheckBox
+            style="@style/q03_checkbox"
+            android:id="@+id/q03_Answer_c"
+            android:text="@string/q03c"
+            android:button="@drawable/checkbox_green"/>
+
+        <CheckBox
+            style="@style/q03_checkbox"
+            android:id="@+id/q03_Answer_d"
+            android:text="@string/q03d"
+            android:button="@drawable/checkbox_green"/>
+
+        <!-- Question 04  -->
+
+        <TextView
+            style="@style/q04_header"
+            android:text="@string/question_04" />
+
+        <ImageView
+            android:src="@drawable/aries"
+            android:scaleType="centerCrop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16sp"
+            android:paddingRight="16sp"
+            android:paddingTop="16sp"
+            android:layout_gravity="center_horizontal"
+            />
+
+        <RadioGroup
+            android:id="@+id/q04_radiogroup"
+            android:scaleType="centerCrop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="16sp"
+            android:paddingRight="16sp"
+            android:paddingTop="8sp"
+            android:layout_gravity="center_horizontal">
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+
+            <RadioButton
+                style="@style/q04_RadioButton"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:text="@string/q04a"/>
+
+            <RadioButton
+                style="@style/q04_RadioButton"
+                android:id="@+id/q04_Answer"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:text="@string/q04b"
+                />
+
+            <RadioButton
+                style="@style/q04_RadioButton"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:text="@string/q04c" />
+
+            <RadioButton
+                style="@style/q04_RadioButton"
+                android:layout_row="1"
+                android:layout_column="1"
+                android:text="@string/q04d" />
+            </GridLayout>
+
+        </RadioGroup>
+
+
+        <!-- Astrology Quiz submit -->
+        <Button
+            style="@style/button"
+            android:id="@+id/submit_sign"
+            android:text="@string/submitSign"/>
+
+        <Button
+            style="@style/button"
+            android:id="@+id/reset"
+            android:text="@string/reset"/>
+
+    </LinearLayout>
+
+    </ScrollView>
