@@ -22,6 +22,9 @@ import android.widget.Toast;
 
 import static android.R.attr.button;
 import static android.R.attr.focusable;
+import static com.example.android.astrologyquiz.R.id.q01_Answer;
+import static com.example.android.astrologyquiz.R.id.q04_Answer;
+import static com.example.android.astrologyquiz.R.id.q05_Answer;
 
 public class MainActivity extends AppCompatActivity {
     int score = 0;
@@ -74,6 +77,39 @@ public class MainActivity extends AppCompatActivity {
                                          }
                                      }
         );
+    }
+
+
+    public void Answer05_Click_RadioGroup_Simulation (View v)
+    {   RadioButton q05_btn_1 = (RadioButton)findViewById(R.id.q05_btn_1);
+        RadioButton q05_btn_2 = (RadioButton)findViewById(R.id.q05_btn_2);
+        RadioButton q05_btn_3 = (RadioButton)findViewById(R.id.q05_btn_3);
+        RadioButton q05_Answer = (RadioButton)findViewById(R.id.q05_Answer);
+
+        switch (v.getId()) {
+            case R.id.q05_btn_1:
+                q05_btn_2.setChecked(false);
+                q05_btn_3.setChecked(false);
+                q05_Answer.setChecked(false);
+                break;
+            case R.id.q05_btn_2:
+                q05_btn_1.setChecked(false);
+                q05_btn_3.setChecked(false);
+                q05_Answer.setChecked(false);
+                break;
+            case R.id.q05_btn_3:
+                q05_btn_1.setChecked(false);
+                q05_btn_2.setChecked(false);
+                q05_Answer.setChecked(false);
+                break;
+            case R.id.q05_Answer:
+                q05_btn_1.setChecked(false);
+                q05_btn_2.setChecked(false);
+                q05_btn_3.setChecked(false);
+                break;
+        }
+
+
     }
 
     public void ButtonAnimation(View v) {
@@ -207,6 +243,10 @@ public class MainActivity extends AppCompatActivity {
         // Restore the values of the scores here
         score = savedState.getInt("score");
     }
+
+
+
+
 }
 
 
