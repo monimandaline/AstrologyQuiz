@@ -25,6 +25,9 @@ import static android.R.attr.focusable;
 import static com.example.android.astrologyquiz.R.id.q01_Answer;
 import static com.example.android.astrologyquiz.R.id.q04_Answer;
 import static com.example.android.astrologyquiz.R.id.q05_Answer;
+import static com.example.android.astrologyquiz.R.id.q05_btn_1;
+import static com.example.android.astrologyquiz.R.id.q05_btn_2;
+import static com.example.android.astrologyquiz.R.id.q05_btn_3;
 
 public class MainActivity extends AppCompatActivity {
     int score = 0;
@@ -79,6 +82,38 @@ public class MainActivity extends AppCompatActivity {
         );
     }
 
+
+    public void Answer04_Click_RadioGroup_Simulation (View v)
+    {   RadioButton q04_btn_1 = (RadioButton)findViewById(R.id.q04_btn_1);
+        RadioButton q04_btn_3 = (RadioButton)findViewById(R.id.q04_btn_3);
+        RadioButton q04_btn_4 = (RadioButton)findViewById(R.id.q04_btn_4);
+        RadioButton q04_Answer = (RadioButton)findViewById(R.id.q04_Answer);
+
+        switch (v.getId()) {
+            case R.id.q04_btn_1:
+                q04_btn_3.setChecked(false);
+                q04_btn_4.setChecked(false);
+                q04_Answer.setChecked(false);
+                break;
+            case R.id.q04_btn_3:
+                q04_btn_1.setChecked(false);
+                q04_btn_4.setChecked(false);
+                q04_Answer.setChecked(false);
+                break;
+            case R.id.q04_btn_4:
+                q04_btn_1.setChecked(false);
+                q04_btn_3.setChecked(false);
+                q04_Answer.setChecked(false);
+                break;
+            case R.id.q04_Answer:
+                q04_btn_1.setChecked(false);
+                q04_btn_3.setChecked(false);
+                q04_btn_4.setChecked(false);
+                break;
+        }
+
+
+    }
 
     public void Answer05_Click_RadioGroup_Simulation (View v)
     {   RadioButton q05_btn_1 = (RadioButton)findViewById(R.id.q05_btn_1);

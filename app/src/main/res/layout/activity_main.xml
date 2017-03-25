@@ -214,8 +214,10 @@
 
             <RadioButton
                 style="@style/q04_RadioButton"
+                android:id="@+id/q04_btn_1"
                 android:layout_row="0"
                 android:layout_column="0"
+                android:onClick="Answer04_Click_RadioGroup_Simulation"
                 android:text="@string/q04a"/>
 
             <RadioButton
@@ -223,19 +225,24 @@
                 android:id="@+id/q04_Answer"
                 android:layout_row="0"
                 android:layout_column="1"
+                android:onClick="Answer04_Click_RadioGroup_Simulation"
                 android:text="@string/q04b"
                 />
 
             <RadioButton
                 style="@style/q04_RadioButton"
+                android:id="@+id/q04_btn_3"
                 android:layout_row="1"
                 android:layout_column="0"
+                android:onClick="Answer04_Click_RadioGroup_Simulation"
                 android:text="@string/q04c" />
 
             <RadioButton
                 style="@style/q04_RadioButton"
+                android:id="@+id/q04_btn_4"
                 android:layout_row="1"
                 android:layout_column="1"
+                android:onClick="Answer04_Click_RadioGroup_Simulation"
                 android:text="@string/q04d" />
             </GridLayout>
 
