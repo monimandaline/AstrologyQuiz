@@ -144,8 +144,42 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
 
+    }
+
+    public void Answer06_Click_RadioGroup_Simulation (View v)
+    {   RadioButton q06_btn_1 = (RadioButton)findViewById(R.id.q06_btn_1);
+        RadioButton q06_btn_2 = (RadioButton)findViewById(R.id.q06_btn_2);
+        RadioButton q06_btn_4 = (RadioButton)findViewById(R.id.q06_btn_4);
+        RadioButton q06_Answer = (RadioButton)findViewById(R.id.q06_Answer);
+
+        switch (v.getId()) {
+            case R.id.q06_btn_1:
+                q06_btn_2.setChecked(false);
+                q06_btn_4.setChecked(false);
+                q06_Answer.setChecked(false);
+                break;
+            case R.id.q06_btn_2:
+                q06_btn_1.setChecked(false);
+                q06_btn_4.setChecked(false);
+                q06_Answer.setChecked(false);
+                break;
+            case R.id.q06_btn_4:
+                q06_btn_1.setChecked(false);
+                q06_btn_2.setChecked(false);
+                q06_Answer.setChecked(false);
+                break;
+            case R.id.q06_Answer:
+                q06_btn_1.setChecked(false);
+                q06_btn_2.setChecked(false);
+                q06_btn_4.setChecked(false);
+                break;
+        }
 
     }
+
+
+
+
 
     public void ButtonAnimation(View v) {
 

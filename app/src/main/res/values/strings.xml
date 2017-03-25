@@ -38,6 +38,11 @@
     <string name="q05d">Winter</string>
 
     <string name="question_06">Which element is associated with Cancer?</string>
+    <string name="q06a">Earth</string>
+    <string name="q06b">Fire</string>
+    <string name="q06c">Water</string>
+    <string name="q06d">Air</string>
+
     <string name="question_07">  </string>
     <string name="question_08">  </string>
     <string name="question_09">  </string>
