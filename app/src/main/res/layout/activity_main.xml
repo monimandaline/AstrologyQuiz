@@ -20,6 +20,68 @@
             style="@style/name"
             android:text="@string/user_name" />
 
+        <!-- Question 05  -->
+
+        <TextView
+            style="@style/q05_header"
+            android:text="@string/question_05" />
+
+        <ImageView
+            android:src="@drawable/bak_tel"
+            android:scaleType="center"
+            android:paddingLeft="0sp"
+            android:paddingRight="0sp"
+            android:paddingTop="0sp"
+            android:layout_width="fill_parent"
+            android:layout_height="300dp"
+            android:adjustViewBounds="true"
+            />
+
+
+        <RadioGroup
+            android:id="@+id/q05_radiogroup"
+            android:scaleType="centerCrop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="0sp"
+            android:paddingRight="0sp"
+            android:paddingTop="8sp"
+            android:layout_gravity="center_horizontal">
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <RadioButton
+                    style="@style/q05_RadioButton"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:text="@string/q05a"/>
+
+                <RadioButton
+                    style="@style/q05_RadioButton"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:text="@string/q05b"
+                    />
+
+                <RadioButton
+                    style="@style/q05_RadioButton"
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    android:text="@string/q05c" />
+
+                <RadioButton
+                    style="@style/q05_RadioButton"
+                    android:layout_row="1"
+                    android:layout_column="1"
+                    android:id="@+id/q05_Answer"
+                    android:text="@string/q05d" />
+
+            </GridLayout>
+        </RadioGroup>
+
+
 
         <!-- Questions  -->
         <EditText
@@ -171,6 +233,10 @@
             </GridLayout>
 
         </RadioGroup>
+
+
+
+
 
 
         <!-- Astrology Quiz submit -->

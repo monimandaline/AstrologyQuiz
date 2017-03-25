@@ -31,9 +31,12 @@
     <string name="q04c">Virgo</string>
     <string name="q04d">Libra</string>
 
-
-
     <string name="question_05">Which season is associated with Capricorn?</string>
+    <string name="q05a">Summer</string>
+    <string name="q05b">Autumn</string>
+    <string name="q05c">Spring</string>
+    <string name="q05d">Winter</string>
+
     <string name="question_06">Which element is associated with Cancer?</string>
     <string name="question_07">  </string>
     <string name="question_08">  </string>

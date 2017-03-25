@@ -150,6 +150,14 @@ public class MainActivity extends AppCompatActivity {
             score += 1;
         }
 
+        // Question 05 Checking
+        RadioButton q05_Answer = (RadioButton) findViewById(R.id.q05_Answer);
+        boolean question_05_ok = q05_Answer.isChecked();
+
+        if (question_05_ok) {
+            Log.v("MainActivity", "CalculateResult - q5 ok");
+            score += 1;
+        }
 
 
 
