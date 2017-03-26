@@ -25,15 +25,20 @@
         <EditText
             style="@style/user_name"
             android:id="@+id/user_name"
-             android:hint="@string/user_name_hint" />
+            android:hint="@string/user_name_hint" />
 
 
         <!-- Question 01  -->
         <TextView
             style="@style/q01_header"
             android:text="@string/question_01"
-            android:id="@+id/textView"
             android:layout_width="match_parent" />
+
+        <TextView
+            android:id="@+id/resultTxt_01"
+            style="@style/result_text"
+            android:text="Answer is..."
+             />
 
         <RadioGroup
             android:id="@+id/q01_radiogroup"
@@ -51,15 +56,18 @@
                 android:text="@string/q01a"/>
 
             <RadioButton
+                android:id="@+id/q01_btn_2"
                 style="@style/q01_RadioButton"
                 android:text="@string/q01b"
                 />
 
             <RadioButton
+                android:id="@+id/q01_btn_3"
                 style="@style/q01_RadioButton"
                 android:text="@string/q01c" />
 
             <RadioButton
+                android:id="@+id/q01_btn_4"
                 style="@style/q01_RadioButton"
                 android:text="@string/q01d" />
         </RadioGroup>
@@ -69,6 +77,11 @@
         <TextView
             style="@style/q02_header"
             android:text="@string/question_02" />
+        <TextView
+            android:id="@+id/resultTxt_02"
+            style="@style/result_text"
+            android:text="Answer is..."
+            />
 
         <EditText
             style="@style/q02_edittext"

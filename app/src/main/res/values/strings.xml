@@ -6,6 +6,10 @@
     <string name="reset">Try again!</string>
     <string name="close">Close</string>
 
+
+    <string name="correctanswer">Your answer is correct!</string>
+    <string name="wronganswer">Your answer is wrong!</string>
+
     <string name="user_name_hint">YOUR NAME</string>
 
     <string name="question_01">What is the colors of Leo?</string>
@@ -17,6 +21,7 @@
     <string name="question_02">Which astrological sign has the characteristics of being scattered?</string>
     <string name="q02_hint">SIGN</string>
     <string name="help_text_q2">Please, write an astrological sign here</string>
+    <string name="wronganswer_02_gemini">Your answer is wrong! The correct answer is: GEMINI.</string>
 
     <string name="question_03">Where would Taurus likes to live?</string>
     <string name="q03a">country house</string>

@@ -1,14 +1,10 @@
 package com.example.android.astrologyquiz;
 
-import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationSet;
@@ -16,22 +12,15 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.PopupWindow;
 import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
-
-import static android.R.attr.button;
-import static android.R.attr.focusable;
-import static com.example.android.astrologyquiz.R.id.q01_Answer;
-import static com.example.android.astrologyquiz.R.id.q04_Answer;
-import static com.example.android.astrologyquiz.R.id.q05_Answer;
-import static com.example.android.astrologyquiz.R.id.q05_btn_1;
-import static com.example.android.astrologyquiz.R.id.q05_btn_2;
-import static com.example.android.astrologyquiz.R.id.q05_btn_3;
-import static com.example.android.astrologyquiz.R.id.textView;
+import static android.R.attr.value;
+import static com.example.android.astrologyquiz.R.id.q03_Answer_a;
+import static com.example.android.astrologyquiz.R.id.resultTxt_01;
+import static com.example.android.astrologyquiz.R.string.correctanswer;
+import static com.example.android.astrologyquiz.R.string.question_02;
+import static com.example.android.astrologyquiz.R.string.wronganswer;
 
 public class MainActivity extends AppCompatActivity {
     public static int score = 0;
@@ -51,6 +40,13 @@ public class MainActivity extends AppCompatActivity {
         }
 
         Log.v("MainActivity", "Score: " + score);
+        //initialize ui
+
+        TextView resultTxt_01 = (TextView) findViewById(R.id.resultTxt_01);
+        resultTxt_01.setVisibility(View.GONE);
+        TextView resultTxt_02 = (TextView) findViewById(R.id.resultTxt_02);
+        resultTxt_02.setVisibility(View.GONE);
+
 
         //** Reset button visibility setting **//
         Button btnReset = (Button) findViewById(R.id.reset);
@@ -80,6 +76,7 @@ public class MainActivity extends AppCompatActivity {
                                          public void onClick(View v) {
                                              ButtonAnimation(v);
                                              Log.v("MainActivity", "Reset Button Press");
+                                             // restart quiz
                                              finish();
                                              startActivity(getIntent());
                                          }
@@ -213,18 +210,34 @@ public class MainActivity extends AppCompatActivity {
         // Question 01 Checking
         RadioButton q01_Answer = (RadioButton) findViewById(R.id.q01_Answer);
         boolean question_01_ok = q01_Answer.isChecked();
+        TextView resultTxt_01 = (TextView) findViewById(R.id.resultTxt_01);
+        resultTxt_01.setVisibility(View.VISIBLE);
 
         if (question_01_ok) {
             Log.v("MainActivity", "CalculateResult - q1 ok");
             score += 1;
+            resultTxt_01.setText(getString(R.string.correctanswer));
         }
+        else
+        {
+            resultTxt_01.setText(getString(R.string.wronganswer));
+        }
+
 
         // Question 02 Checking
         EditText question_02 = (EditText) findViewById(R.id.q02_answer);
         String question_02_Answer = question_02.getText().toString();
         String correctAnswer = "gemini";
+        TextView resultTxt_02 = (TextView) findViewById(R.id.resultTxt_02);
+         resultTxt_02.setVisibility(View.VISIBLE);
+
         if (question_02_Answer.equals(correctAnswer)) {
             score += 1;
+             resultTxt_02.setText(getString(R.string.correctanswer));
+        }
+        else
+        {
+            resultTxt_02.setText(getString(R.string.wronganswer_02_gemini));
         }
 
 
@@ -289,22 +302,56 @@ public class MainActivity extends AppCompatActivity {
 
         if (score != 0) {
 
+            RadioButton q01_btn_2 = (RadioButton)findViewById(R.id.q01_btn_2);
+            RadioButton q01_btn_3 = (RadioButton)findViewById(R.id.q01_btn_3);
+            RadioButton q01_btn_4 = (RadioButton)findViewById(R.id.q01_btn_4);
 
-            q01_Answer.setBackgroundResource(R.drawable.radiobutton_sel_01_correct);
-            q01_Answer.setChecked(true);
+            q01_Answer.setButtonDrawable(R.drawable.radiobutton_sel_correct);
+            q01_Answer.refreshDrawableState();
 
-            RadioGroup q01_rg = (RadioGroup) findViewById(R.id.q01_radiogroup);
-            for (int i = 0; i < q01_rg.getChildCount(); i++) {
-                q01_rg.getChildAt(i).setEnabled(false);
-            }
+            q01_btn_2.setButtonDrawable(R.drawable.radiobutton_sel_wrong);
+            q01_btn_2.refreshDrawableState();
+
+            q01_btn_3.setButtonDrawable(R.drawable.radiobutton_sel_wrong);
+            q01_btn_3.refreshDrawableState();
+
+            q01_btn_4.setButtonDrawable(R.drawable.radiobutton_sel_wrong);
+            q01_btn_4.refreshDrawableState();
+
+
+            q04_Answer.setButtonDrawable(R.drawable.radiobutton_sel_correct);
+            q04_Answer.refreshDrawableState();
+
+            //RadioGroup q01_rg = (RadioGroup) findViewById(R.id.q01_radiogroup);
+            //for (int i = 0; i < q01_rg.getChildCount(); i++) {
+            //    q01_rg.getChildAt(i).setEnabled(false);
+            //}
 
             //Toast.makeText(this, user_name + ", you are amazing! Score is: " + score, Toast.LENGTH_LONG).show();
         }
 
         if (score == 0) {
-            q01_Answer.setChecked(true);
-            q01_Answer.setButtonDrawable(R.drawable.radiobutton_01_correct);
+           // q01_Answer.setChecked(true);
 
+            RadioButton q01_btn_2 = (RadioButton)findViewById(R.id.q01_btn_2);
+            RadioButton q01_btn_3 = (RadioButton)findViewById(R.id.q01_btn_3);
+            RadioButton q01_btn_4 = (RadioButton)findViewById(R.id.q01_btn_4);
+
+            q01_Answer.setButtonDrawable(R.drawable.radiobutton_sel_correct);
+            q01_Answer.refreshDrawableState();
+
+            q01_btn_2.setButtonDrawable(R.drawable.radiobutton_sel_wrong);
+            q01_btn_2.refreshDrawableState();
+
+            q01_btn_3.setButtonDrawable(R.drawable.radiobutton_sel_wrong);
+            q01_btn_3.refreshDrawableState();
+
+            q01_btn_4.setButtonDrawable(R.drawable.radiobutton_sel_wrong);
+            q01_btn_4.refreshDrawableState();
+
+
+            q04_Answer.setButtonDrawable(R.drawable.radiobutton_sel_correct);
+            q04_Answer.refreshDrawableState();
             //Toast.makeText(this, "Sorry " + user_name + ", but your Score is: " + score, Toast.LENGTH_LONG).show();
 
 
