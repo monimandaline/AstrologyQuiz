@@ -35,28 +35,34 @@ public class MainActivity extends AppCompatActivity {
         if (savedState != null) {
             // Restore value from saved state
             score = savedState.getInt(String.valueOf(score));
+            user_name = savedState.getString(String.valueOf(user_name));
         } else {
             score = 0;
+            user_name = "";
         }
 
         Log.v("MainActivity", "Score: " + score);
-        //initialize ui
 
-        TextView resultTxt_01 = (TextView) findViewById(R.id.resultTxt_01);
-        resultTxt_01.setVisibility(View.GONE);
-        TextView resultTxt_02 = (TextView) findViewById(R.id.resultTxt_02);
-        resultTxt_02.setVisibility(View.GONE);
+        //** Initialize UI ** //
+
+            //** Result Text hide
+            TextView resultTxt_01 = (TextView) findViewById(R.id.resultTxt_01);
+            resultTxt_01.setVisibility(View.GONE);
+
+            TextView resultTxt_02 = (TextView) findViewById(R.id.resultTxt_02);
+            resultTxt_02.setVisibility(View.GONE);
+
+            //** Reset button visibility setting ("Try again!")**//
+            Button btnReset = (Button) findViewById(R.id.reset);
+            btnReset.setVisibility(View.GONE);
+
+            //** Submit button - calculate result **//
+            Button btnSubmit = (Button) findViewById(R.id.submit_sign);
+            btnSubmit.setVisibility(View.VISIBLE);
 
 
-        //** Reset button visibility setting **//
-        Button btnReset = (Button) findViewById(R.id.reset);
-        btnReset.setVisibility(View.GONE);
+        //** End of Initialize UI ** //
 
-
-        //** Submit button, calculate result **//
-        Button btnSubmit = (Button) findViewById(R.id.submit_sign);
-
-        btnSubmit.setVisibility(View.VISIBLE);
 
         btnSubmit.setOnClickListener(new View.OnClickListener() {
                                          @Override
@@ -82,6 +88,7 @@ public class MainActivity extends AppCompatActivity {
                                          }
                                      }
         );
+
     }
 
 
