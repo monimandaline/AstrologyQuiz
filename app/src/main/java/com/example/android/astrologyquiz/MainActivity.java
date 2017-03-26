@@ -7,6 +7,8 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationSet;
@@ -14,6 +16,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.PopupWindow;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -28,9 +31,11 @@ import static com.example.android.astrologyquiz.R.id.q05_Answer;
 import static com.example.android.astrologyquiz.R.id.q05_btn_1;
 import static com.example.android.astrologyquiz.R.id.q05_btn_2;
 import static com.example.android.astrologyquiz.R.id.q05_btn_3;
+import static com.example.android.astrologyquiz.R.id.textView;
 
 public class MainActivity extends AppCompatActivity {
-    int score = 0;
+    public static int score = 0;
+    public static String user_name = "";
 
     @Override
     protected void onCreate(Bundle savedState) {
@@ -264,13 +269,23 @@ public class MainActivity extends AppCompatActivity {
             score += 1;
         }
 
+        // Question 06 Checking
+        RadioButton q06_Answer = (RadioButton) findViewById(R.id.q06_Answer);
+        boolean question_06_ok = q06_Answer.isChecked();
+
+        if (question_06_ok) {
+            Log.v("MainActivity", "CalculateResult - q6 ok");
+            score += 1;
+        }
 
 
         //************************************************************************************************************
         // result
         EditText user_name_et = (EditText) findViewById(R.id.user_name);
-        String user_name = user_name_et.getText().toString();
+        user_name = user_name_et.getText().toString();
 
+
+        startActivity(new Intent(MainActivity.this,Pop.class));
 
         if (score != 0) {
 
@@ -283,17 +298,15 @@ public class MainActivity extends AppCompatActivity {
                 q01_rg.getChildAt(i).setEnabled(false);
             }
 
-
-            Toast.makeText(this, user_name + ", you are amazing! Score is: " + score, Toast.LENGTH_LONG).show();
-
-
+            //Toast.makeText(this, user_name + ", you are amazing! Score is: " + score, Toast.LENGTH_LONG).show();
         }
 
         if (score == 0) {
             q01_Answer.setChecked(true);
             q01_Answer.setButtonDrawable(R.drawable.radiobutton_01_correct);
 
-            Toast.makeText(this, "Sorry " + user_name + ", but your Score is: " + score, Toast.LENGTH_LONG).show();
+            //Toast.makeText(this, "Sorry " + user_name + ", but your Score is: " + score, Toast.LENGTH_LONG).show();
+
 
 
         }

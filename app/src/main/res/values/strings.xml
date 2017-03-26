@@ -4,6 +4,7 @@
     <string name="user_name">Please, enter your name</string>
     <string name="submitSign">Submit Answers</string>
     <string name="reset">Try again!</string>
+    <string name="close">Close</string>
 
     <string name="user_name_hint">YOUR NAME</string>
 

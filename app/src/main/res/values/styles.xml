@@ -209,7 +209,7 @@
         <item name="android:paddingRight">16sp</item>
         <item name="android:paddingTop">8sp</item>
         <item name="android:paddingBottom">8sp</item>
-        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:layout_marginTop">16dp</item>
         <item name="android:textSize">20sp</item>
     </style>
 
@@ -237,7 +237,7 @@
         <item name="android:paddingRight">16sp</item>
         <item name="android:paddingTop">8sp</item>
         <item name="android:paddingBottom">8sp</item>
-        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:layout_marginTop">16dp</item>
         <item name="android:textSize">20sp</item>
     </style>
 
@@ -255,6 +255,9 @@
         <item name="android:button">@drawable/radiobutton_sel_cancer</item>
     </style>
 
-
+    <style name="AppTheme.CustomTheme">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+    </style>
 
 </resources>
