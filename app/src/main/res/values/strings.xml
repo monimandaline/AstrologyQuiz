@@ -18,7 +18,7 @@
     <string name="q01c">Purple</string>
     <string name="q01d">Black</string>
 
-    <string name="question_02">Which Astrological sign has the characteristics of being scattered?</string>
+    <string name="question_02">Which astrological sign has the characteristics of being scattered?</string>
     <string name="q02_hint">SIGN</string>
     <string name="help_text_q2">Please, write an astrological sign here</string>
     <string name="wronganswer_02_gemini">Your answer is wrong! The correct answer is: GEMINI.</string>
