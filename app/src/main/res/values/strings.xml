@@ -18,7 +18,7 @@
     <string name="q01c">Purple</string>
     <string name="q01d">Black</string>
 
-    <string name="question_02">Which astrological sign has the characteristics of being scattered?</string>
+    <string name="question_02">Which Astrological sign has the characteristics of being scattered?</string>
     <string name="q02_hint">SIGN</string>
     <string name="help_text_q2">Please, write an astrological sign here</string>
     <string name="wronganswer_02_gemini">Your answer is wrong! The correct answer is: GEMINI.</string>
@@ -28,7 +28,7 @@
     <string name="q03b">downtown apartment</string>
     <string name="q03c">town house with large garden</string>
     <string name="q03d">residential area</string>
-    <string name="help_text_q3">Több megoldás is lehetséges</string>
+    <string name="help_text_q3">More solutions are possible</string>
 
 
     <string name="question_04">Which Sign is associated with this symbol?</string>
@@ -49,10 +49,27 @@
     <string name="q06c">Water</string>
     <string name="q06d">Air</string>
 
-    <string name="question_07">  </string>
-    <string name="question_08">  </string>
-    <string name="question_09">  </string>
-    <string name="question_10">  </string>
+    <string name="question_07">Which symbol is associated with the planet Neptune?</string>
+
+    <string name="question_08">Which Astrological sign belongs to the foot? </string>
+    <string name="q08a">Pisces</string>
+    <string name="q08b">Sagittarius</string>
+    <string name="q08c">Scorpio</string>
+    <string name="q08d">Aquarius</string>
+
+    <string name="question_09">Which characteristic best describe the planet Sun? </string>
+    <string name="q09a">Vitality</string>
+    <string name="q09b">Creativity</string>
+    <string name="q09c">Sensitivity</string>
+    <string name="q09d">Aggression</string>
+    <string name="help_text_q9">More solutions are possible</string>
+
+    <string name="question_10">Which characteristics best describe Scorpio?</string>
+    <string name="q10a">indecisive, charming, harmonious</string>
+    <string name="q10b">communicative, tense, versatile</string>
+    <string name="q10c">manipulative, forceful, jelaous</string>
+    <string name="q10d">cheerful, tactless, intellectual</string>
+
 
 
 
