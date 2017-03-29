@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#FFFFFF"
     tools:context="com.example.android.astrologyquiz.MainActivity">
 
     <LinearLayout
@@ -373,12 +374,7 @@
             android:paddingTop="8sp"
             android:layout_gravity="center_horizontal">
 
-            <GridLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                >
-
-                <RadioButton
+                 <RadioButton
                     style="@style/q07_RadioButton"
                     android:id="@+id/q07_Answer"
                     android:layout_row="0"
@@ -413,9 +409,6 @@
                     android:button="@drawable/radiobutton_sel_neptun_04"
                     android:onClick="Answer07_Click_RadioGroup_Simulation"
                     />
-
-
-            </GridLayout>
 
         </RadioGroup>
 

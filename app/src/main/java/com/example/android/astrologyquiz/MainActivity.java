@@ -30,6 +30,7 @@ import static com.example.android.astrologyquiz.R.id.q06_btn_2;
 import static com.example.android.astrologyquiz.R.id.q06_btn_4;
 import static com.example.android.astrologyquiz.R.id.q07_Answer;
 import static com.example.android.astrologyquiz.R.id.resultTxt_01;
+import static com.example.android.astrologyquiz.R.id.resultTxt_02;
 import static com.example.android.astrologyquiz.R.id.resultTxt_07;
 import static com.example.android.astrologyquiz.R.string.correctanswer;
 import static com.example.android.astrologyquiz.R.string.question_02;
@@ -319,9 +320,9 @@ public class MainActivity extends AppCompatActivity {
 
         // Question 02 Checking
 
-            EditText question_02 = (EditText) findViewById(q02_answer);
+            EditText question_02 = (EditText) findViewById(R.id.q02_answer);
             String question_02_Answer = question_02.getText().toString();
-            String correctAnswer = "gemini";
+            String correctAnswer = getResources().getString(R.string.q02_answer_text);
 
             TextView resultTxt_02 = (TextView) findViewById(R.id.resultTxt_02);
             resultTxt_02.setVisibility(View.VISIBLE);

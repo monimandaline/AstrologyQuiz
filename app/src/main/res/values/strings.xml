@@ -69,8 +69,12 @@
     <string name="q10b">communicative, tense, versatile</string>
     <string name="q10c">manipulative, forceful, jelaous</string>
     <string name="q10d">cheerful, tactless, intellectual</string>
-
-
+    <string name="q02_answer_text">GEMINI</string>
+    <string name="result_zero">Try again!</string>
+    <string name="result_ten">Congratulations! You are amazing!</string>
+    <string name="result_low">Congartulations!</string>
+    <string name="user_invocation">Dear</string>
+    <string name="result_score">Your score is:</string>
 
 
 </resources>

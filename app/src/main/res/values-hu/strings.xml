@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">Astrology Quiz</string>
     <string name="close">Bezár</string>
-    <string name="correctanswer">A válaszod helytelen!</string>
+    <string name="correctanswer">A válaszod helyes!</string>
     <string name="help_text_q2">Kérlek, írj ide egy asztrológiai jegyet!</string>
     <string name="help_text_q3">Több válasz is lehetséges!</string>
     <string name="help_text_q9">Több válasz is lehetséges!</string>
@@ -54,6 +54,12 @@
     <string name="submitSign">Értékelés</string>
     <string name="user_name">Kérlek, add meg a nevedet!</string>
     <string name="user_name_hint">NÉV</string>
-    <string name="wronganswer">A válasz sajnos helytelen!</string>
+    <string name="wronganswer">A válasz helytelen</string>
     <string name="wronganswer_02_gemini">A válasz sajnos helytelen! A jó válasz: IKREK</string>
+    <string name="q02_answer_text">IKREK</string>
+    <string name="result_zero">Próbáld újra!</string>
+    <string name="result_ten">Gratulálok! Bámulatos vagy!</string>
+    <string name="result_low">Gratulálok!</string>
+    <string name="user_invocation">Kedves</string>
+    <string name="result_score">Az eredményed:</string>
 </resources>

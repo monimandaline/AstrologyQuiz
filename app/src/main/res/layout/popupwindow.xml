@@ -3,15 +3,27 @@
     android:layout_width="match_parent" android:layout_height="match_parent"
     android:background="#20538D">
 
+    <ImageView
+        android:src="@drawable/astro_quiz"
+        android:scaleType="fitXY"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="16dp"
+        android:layout_centerHorizontal="true"
+        />
+
     <TextView
         android:text="Pop Up"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="200dp"
+        android:padding="16dp"
+        android:layout_marginTop="130dp"
         android:id="@+id/popup_result"
-        android:textSize="30sp"
+        android:textSize="24sp"
         android:textColor="#FFFFFF"
         android:gravity="center_vertical"
         />
@@ -21,7 +33,7 @@
         android:text="@string/close"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="91dp"
+        android:layout_marginBottom="16dp"
         android:id="@+id/button"
         android:onClick="CloseWindow"/>
 </RelativeLayout>

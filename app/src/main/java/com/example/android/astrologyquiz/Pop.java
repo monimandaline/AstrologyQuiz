@@ -29,20 +29,28 @@ public class Pop extends Activity {
         int width = dm.widthPixels;
         int height = dm.heightPixels;
 
-        getWindow().setLayout((int)(width*.8),(int)(height*.6));
+        getWindow().setLayout((int)(width*.8),(int)(height*.8));
 
+        String ResultTxt = "";
 
-        if (MainActivity.score != 0) {
-            TextView popup_result  = (TextView) findViewById(R.id.popup_result);
-            popup_result.setText(MainActivity.user_name + ", you are amazing!" + "\n" + "Score is: " + MainActivity.score);
+        String user_invocation = getResources().getString(R.string.user_invocation);
+        String result_score = getResources().getString(R.string.result_score);
+
+        if (MainActivity.score != 0 & MainActivity.score != 10) {
+            ResultTxt = getResources().getString(R.string.result_low);
         }
 
         if (MainActivity.score == 0) {
-            TextView popup_result  = (TextView) findViewById(R.id.popup_result);
-            popup_result.setText("Sorry " + MainActivity.user_name + "\n" + "Your Score is: " + MainActivity.score);
-
+            ResultTxt = getResources().getString(R.string.result_zero);
         }
 
+
+        if (MainActivity.score == 10) {
+            ResultTxt = getResources().getString(R.string.result_ten);
+        }
+
+        TextView popup_result  = (TextView) findViewById(R.id.popup_result);
+        popup_result.setText(user_invocation + " " + MainActivity.user_name + "!" + "\n" + "\n" + ResultTxt + "\n" +  result_score + " " + MainActivity.score + "/10");
 
     }
 

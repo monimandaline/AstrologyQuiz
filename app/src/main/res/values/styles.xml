@@ -61,6 +61,7 @@
         <item name="android:textSize">20sp</item>
         <item name="android:background">#6699FF</item>
         <item name="android:textColor">#ffffff</item>
+        <item name="android:textAllCaps">true</item>
     </style>
 
     <style name="user_name">
@@ -79,7 +80,7 @@
         <item name="android:layout_marginLeft">32dp</item>
         <item name="android:layout_marginRight">32dp</item>
         <item name="android:textAllCaps">true</item>
-        <item name="android:inputType">textNoSuggestions</item>
+        <item name="android:inputType">textCapCharacters</item>
     </style>
 
 
@@ -157,7 +158,7 @@
         <item name="android:layout_marginLeft">32dp</item>
         <item name="android:layout_marginRight">32dp</item>
         <item name="android:textAllCaps">true</item>
-        <item name="android:inputType">textNoSuggestions</item>
+        <item name="android:inputType">textCapCharacters</item>
 
     </style>
 
@@ -218,7 +219,7 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_marginTop">8dp</item>
         <item name="android:layout_marginBottom">8dp</item>
-        <item name="android:layout_marginLeft">32dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
         <item name="android:paddingLeft">16dp</item>
         <item name="android:paddingRight">36dp</item>
         <item name="android:textSize">16sp</item>
@@ -246,7 +247,7 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_marginTop">8dp</item>
         <item name="android:layout_marginBottom">8dp</item>
-        <item name="android:layout_marginLeft">32dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
         <item name="android:paddingLeft">16dp</item>
         <item name="android:paddingRight">36dp</item>
         <item name="android:textSize">16sp</item>
@@ -274,7 +275,7 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_marginTop">8dp</item>
         <item name="android:layout_marginBottom">8dp</item>
-        <item name="android:layout_marginLeft">32dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
         <item name="android:paddingLeft">16dp</item>
         <item name="android:paddingRight">36dp</item>
         <item name="android:textSize">16sp</item>
@@ -285,7 +286,7 @@
 
     <style name = "q07_RadioButton">
         <item name="android:scaleType">centerCrop</item>
-        <item name="android:layout_width">180dp</item>
+        <item name="android:layout_width">300dp</item>
         <item name="android:layout_height">74dp</item>
         <item name="android:background">#FFFFFF</item>
         <item name="android:paddingLeft">16sp</item>
@@ -294,7 +295,7 @@
         <item name="android:paddingBottom">8sp</item>
         <item name="android:layout_marginTop">8dp</item>
         <item name="android:layout_marginBottom">8dp</item>
-        <item name="android:layout_marginLeft">32dp</item>
+        <item name="android:layout_marginLeft">8dp</item>
     </style>
 
     <style name="q08_RadioButton">
@@ -325,6 +326,7 @@
         <item name="android:paddingRight">16sp</item>
         <item name="android:paddingTop">8sp</item>
         <item name="android:paddingBottom">8sp</item>
+        <item name="android:layout_marginTop">16dp</item>
         <item name="android:textSize">20sp</item>
     </style>
 
@@ -362,6 +364,7 @@
         <item name="android:layout_marginTop">8dp</item>
         <item name="android:layout_marginLeft">48dp</item>
         <item name="android:paddingLeft">18dp</item>
+        <item name="android:paddingRight">18dp</item>
         <item name="android:textSize">16sp</item>
         <item name="android:textColor">#FECB00</item>
     </style>
