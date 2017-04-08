@@ -12,34 +12,15 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
-import static android.R.attr.value;
-import static com.example.android.astrologyquiz.R.id.q01_Answer;
-import static com.example.android.astrologyquiz.R.id.q02_answer;
-import static com.example.android.astrologyquiz.R.id.q03_Answer_a;
-import static com.example.android.astrologyquiz.R.id.q03_Answer_b;
-import static com.example.android.astrologyquiz.R.id.q03_Answer_c;
-import static com.example.android.astrologyquiz.R.id.q05_btn_1;
-import static com.example.android.astrologyquiz.R.id.q05_btn_3;
-import static com.example.android.astrologyquiz.R.id.q06_Answer;
-import static com.example.android.astrologyquiz.R.id.q06_btn_1;
-import static com.example.android.astrologyquiz.R.id.q06_btn_2;
-import static com.example.android.astrologyquiz.R.id.q06_btn_4;
-import static com.example.android.astrologyquiz.R.id.q07_Answer;
-import static com.example.android.astrologyquiz.R.id.resultTxt_01;
-import static com.example.android.astrologyquiz.R.id.resultTxt_02;
-import static com.example.android.astrologyquiz.R.id.resultTxt_07;
-import static com.example.android.astrologyquiz.R.string.correctanswer;
-import static com.example.android.astrologyquiz.R.string.question_02;
-import static com.example.android.astrologyquiz.R.string.wronganswer;
-
 public class MainActivity extends AppCompatActivity {
+    // Result score and user name init
     public static int score = 0;
     public static String user_name = "";
 
+    // Result on screen init (this variable will be used on screen rotation)
     public static boolean result_on_screen = false;
 
     @Override
@@ -47,10 +28,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedState);
         setContentView(R.layout.activity_main);
 
-
-        Log.v("MainActivity", "rotate: " + result_on_screen);
-        Log.v("MainActivity", "Score: " + score);
-        Log.v("MainActivity", "User name: " + user_name);
 
         //** Initialize UI ** //
 
@@ -94,9 +71,9 @@ public class MainActivity extends AppCompatActivity {
             Button btnSubmit = (Button) findViewById(R.id.submit_sign);
             btnSubmit.setVisibility(View.VISIBLE);
 
-        Log.v("MainActivity", "Calculate? " + result_on_screen);
+
+            // If screen is rotating: calculate refresh
             if (result_on_screen) {
-                Log.v("MainActivity", "Rotating calculate refresh");
                 calculateResult();
             }
 
@@ -104,23 +81,21 @@ public class MainActivity extends AppCompatActivity {
         ;
         //** End of Initialize UI ** //
 
-
+        //** Submit button, calculate result **//
         btnSubmit.setOnClickListener(new View.OnClickListener() {
                                          @Override
                                          public void onClick(View v) {
                                              ButtonAnimation(v);
-                                             Log.v("MainActivity", "Submit Button Press");
                                              calculateResult();
                                          }
                                      }
         );
 
-        //** Submit button, calculate result **//
+        //** Reset button, restart quiz **//
         btnReset.setOnClickListener(new View.OnClickListener() {
                                          @Override
                                          public void onClick(View v) {
                                              ButtonAnimation(v);
-                                             Log.v("MainActivity", "Reset Button Press");
                                              // restart quiz
                                              result_on_screen = false;
                                              finish();
@@ -132,6 +107,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    //** This code handles the q04 radio buttons, because those are in two lines, and the RadioGroup can't able to handle this situation.
     public void Answer04_Click_RadioGroup_Simulation (View v)
     {   RadioButton q04_btn_1 = (RadioButton)findViewById(R.id.q04_btn_1);
         RadioButton q04_btn_3 = (RadioButton)findViewById(R.id.q04_btn_3);
@@ -164,6 +140,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    //** This code handles the q05 radio buttons, because those are in two lines, and the RadioGroup can't able to handle this situation.
     public void Answer05_Click_RadioGroup_Simulation (View v)
     {   RadioButton q05_btn_1 = (RadioButton)findViewById(R.id.q05_btn_1);
         RadioButton q05_btn_2 = (RadioButton)findViewById(R.id.q05_btn_2);
@@ -195,6 +172,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    //** This code handles the q06 radio buttons, because those are in two lines, and the RadioGroup can't able to handle this situation.
     public void Answer06_Click_RadioGroup_Simulation (View v)
     {   RadioButton q06_btn_1 = (RadioButton)findViewById(R.id.q06_btn_1);
         RadioButton q06_btn_2 = (RadioButton)findViewById(R.id.q06_btn_2);
@@ -226,6 +204,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    //** This code handles the q07 radio buttons, because those are drawn by drawable xml files, and the RadioGroup can't able to handle this situation.
     public void Answer07_Click_RadioGroup_Simulation (View v)
     {   RadioButton q07_Answer = (RadioButton)findViewById(R.id.q07_Answer);
         RadioButton q07_btn_2 = (RadioButton)findViewById(R.id.q07_btn_2);
@@ -258,7 +237,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
+    //** Submit and Reset button animations
     public void ButtonAnimation(View v) {
 
         final Animation animTranslate = AnimationUtils.loadAnimation(this, R.anim.anim_translate);
@@ -274,9 +253,10 @@ public class MainActivity extends AppCompatActivity {
         v.startAnimation(sets);
     }
 
+
+    //** Result calculating
     public void calculateResult() {
         score = 0;
-        Log.v("MainActivity", "CalculateResult - begin");
 
         //** Submit button visibility setting **//
             Button btnSubmit = (Button) findViewById(R.id.submit_sign);
@@ -294,7 +274,6 @@ public class MainActivity extends AppCompatActivity {
             resultTxt_01.setVisibility(View.VISIBLE);
 
             if (question_01_ok) {
-                Log.v("MainActivity", "CalculateResult - q1 ok");
                 score += 1;
                 resultTxt_01.setText(getString(R.string.correctanswer));
             }
@@ -362,7 +341,6 @@ public class MainActivity extends AppCompatActivity {
                  if ((q03_Answer_a_chk  || q03_Answer_c_chk )) {
                      score += 1;
                      resultTxt_03.setText(getString(R.string.correctanswer));
-                     Log.v("MainActivity", "CalculateResult checkbox!!!!");
                  }
 
                 }
@@ -394,7 +372,6 @@ public class MainActivity extends AppCompatActivity {
             resultTxt_04.setVisibility(View.VISIBLE);
 
             if (question_04_ok) {
-                Log.v("MainActivity", "CalculateResult - q4 ok");
                 score += 1;
 
                 resultTxt_04.setText(getString(R.string.correctanswer));
@@ -429,7 +406,6 @@ public class MainActivity extends AppCompatActivity {
             resultTxt_05.setVisibility(View.VISIBLE);
 
             if (question_05_ok) {
-                Log.v("MainActivity", "CalculateResult - q5 ok");
                 score += 1;
                 resultTxt_05.setText(getString(R.string.correctanswer));
             }
@@ -464,7 +440,6 @@ public class MainActivity extends AppCompatActivity {
             resultTxt_06.setVisibility(View.VISIBLE);
 
             if (question_06_ok) {
-                Log.v("MainActivity", "CalculateResult - q6 ok");
                 score += 1;
                 resultTxt_06.setText(getString(R.string.correctanswer));
             }
@@ -498,7 +473,6 @@ public class MainActivity extends AppCompatActivity {
             resultTxt_07.setVisibility(View.VISIBLE);
 
             if (question_07_ok) {
-                Log.v("MainActivity", "CalculateResult - q7 ok");
                 score += 1;
                 resultTxt_07.setText(getString(R.string.correctanswer));
             }
@@ -534,7 +508,6 @@ public class MainActivity extends AppCompatActivity {
             resultTxt_08.setVisibility(View.VISIBLE);
 
             if (question_08_ok) {
-                Log.v("MainActivity", "CalculateResult - q8 ok");
                 score += 1;
                 resultTxt_08.setText(getString(R.string.correctanswer));
             }
@@ -580,7 +553,6 @@ public class MainActivity extends AppCompatActivity {
                 if ((q09_Answer_a_chk  || q09_Answer_b_chk )) {
                     score += 1;
                     resultTxt_09.setText(getString(R.string.correctanswer));
-                    Log.v("MainActivity", "CalculateResult checkbox!!!!");
                 }
 
             }
@@ -613,7 +585,6 @@ public class MainActivity extends AppCompatActivity {
             resultTxt_10.setVisibility(View.VISIBLE);
 
             if (question_10_ok) {
-                Log.v("MainActivity", "CalculateResult - q10 ok");
                 score += 1;
                 resultTxt_10.setText(getString(R.string.correctanswer));
             }
@@ -647,6 +618,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(new Intent(MainActivity.this, Pop.class));
         }
 
+        // This variable will be used on screen rotation, restore the results on screen
         result_on_screen = true;
 
         Button btnReset = (Button) findViewById(R.id.reset);

@@ -8,42 +8,27 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="greeting">
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:gravity">center_vertical</item>
-        <item name="android:paddingLeft">16sp</item>
-        <item name="android:paddingRight">16sp</item>
-        <item name="android:textSize">16sp</item>
-        <item name="android:background">@color/colorAccent</item>
-        <item name="android:textColor">#FFFFFF</item>
-    </style>
-
-
     <style name="result_text">
         <item name="android:textColor">#000000</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:gravity">center_vertical</item>
-        <item name="android:paddingLeft">8sp</item>
-        <item name="android:paddingRight">8sp</item>
-        <item name="android:paddingTop">8sp</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingRight">8dp</item>
+        <item name="android:paddingTop">8dp</item>
         <item name="android:textSize">14sp</item>
         <item name="android:layout_marginLeft">8dp</item>
     </style>
 
 
     <style name="button">
-        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textColor">@color/color_text_white</item>
         <item name="android:background">@color/colorPrimary</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:gravity">center_vertical|center_horizontal</item>
-        <item name="android:paddingLeft">8sp</item>
-        <item name="android:paddingRight">8sp</item>
-        <item name="android:paddingTop">8sp</item>
-        <item name="android:paddingBottom">8sp</item>
-        <item name="android:textSize">20sp</item>
+        <item name="android:padding">@dimen/activity_text_pad</item>
+        <item name="android:textSize">@dimen/activity_text_size</item>
         <item name="android:layout_marginTop">32dp</item>
         <item name="android:layout_marginBottom">8dp</item>
         <item name="android:layout_marginLeft">32dp</item>
@@ -58,23 +43,20 @@
         <item name="android:paddingRight">16sp</item>
         <item name="android:paddingTop">8sp</item>
         <item name="android:paddingBottom">8sp</item>
-        <item name="android:textSize">20sp</item>
-        <item name="android:background">#6699FF</item>
-        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">@dimen/activity_text_size</item>
+        <item name="android:background">@color/color_name</item>
+        <item name="android:textColor">@color/color_text_white</item>
         <item name="android:textAllCaps">true</item>
     </style>
 
     <style name="user_name">
-        <item name="android:textColor">#6699FF</item>
+        <item name="android:textColor">@color/color_name</item>
         <item name="android:background">#FFFFFF</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:gravity">center_vertical</item>
-        <item name="android:paddingLeft">8sp</item>
-        <item name="android:paddingRight">8sp</item>
-        <item name="android:paddingTop">8sp</item>
-        <item name="android:paddingBottom">8sp</item>
-        <item name="android:textSize">20sp</item>
+        <item name="android:padding">@dimen/activity_text_pad</item>
+        <item name="android:textSize">@dimen/activity_text_size</item>
         <item name="android:layout_marginTop">8dp</item>
         <item name="android:layout_marginBottom">8dp</item>
         <item name="android:layout_marginLeft">32dp</item>
@@ -82,7 +64,6 @@
         <item name="android:textAllCaps">true</item>
         <item name="android:inputType">textCapCharacters</item>
     </style>
-
 
     <style name="q01_RadioButton">
         <item name="android:layout_height">wrap_content</item>
@@ -92,7 +73,7 @@
         <item name="android:paddingTop">8sp</item>
         <item name="android:paddingLeft">8sp</item>
         <item name="android:paddingRight">16sp</item>
-        <item name="android:textSize">20sp</item>
+        <item name="android:textSize">@dimen/activity_text_size</item>
         <item name="android:paddingBottom">8sp</item>
         <item name="android:layout_marginBottom">8dp</item>
         <item name="android:layout_marginLeft">16dp</item>
@@ -102,57 +83,44 @@
         <item name="android:background">@drawable/radiobutton_sel_01</item>
     </style>
 
-    <style name="q01_header">
-        <item name="android:textColor">#FFFFFF</item>
-        <item name="android:background">#FECB00</item>
+    <style name="question_header">
+        <item name="android:textColor">@color/color_text_white</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:gravity">center_vertical</item>
-        <item name="android:paddingLeft">16sp</item>
-        <item name="android:paddingRight">16sp</item>
-        <item name="android:paddingTop">8sp</item>
-        <item name="android:paddingBottom">8sp</item>
-        <item name="android:textSize">20sp</item>
+        <item name="android:paddingLeft">@dimen/header_pad_left</item>
+        <item name="android:paddingRight">@dimen/header_pad_right</item>
+        <item name="android:paddingTop">@dimen/header_pad_top</item>
+        <item name="android:paddingBottom">@dimen/header_pad_bottom</item>
+        <item name="android:textSize">@dimen/header_text_size</item>
     </style>
 
-    <style name="q02_header">
-        <item name="android:textColor">#FFFFFF</item>
-        <item name="android:background">#F96194</item>
-        <item name="android:layout_height">wrap_content</item>
+    <style name="q01_08_10_RadioGroup">
+        <item name="android:scaleType">centerCrop</item>
         <item name="android:layout_width">match_parent</item>
-        <item name="android:gravity">center_vertical</item>
-        <item name="android:paddingLeft">16sp</item>
-        <item name="android:paddingRight">16sp</item>
-        <item name="android:paddingTop">8sp</item>
-        <item name="android:paddingBottom">8sp</item>
-        <item name="android:textSize">20sp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:padding">16sp</item>
     </style>
-
 
     <style name="help_text">
         <item name="android:textColor">#000000</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:gravity">center_vertical</item>
-        <item name="android:paddingLeft">8sp</item>
-        <item name="android:paddingRight">8sp</item>
-        <item name="android:paddingTop">8sp</item>
-        <item name="android:paddingBottom">8sp</item>
+        <item name="android:padding">@dimen/activity_text_pad</item>
         <item name="android:textSize">12sp</item>
         <item name="android:layout_marginLeft">32dp</item>
         <item name="android:layout_marginBottom">8dp</item>
     </style>
 
     <style name="q02_edittext">
-        <item name="android:textColor">#F96194</item>
-        <item name="android:background">#fddbe8</item>
+        <item name="android:textColor">@color/color_pink</item>
+        <item name="android:background">@color/color_light_pink</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:gravity">center_vertical</item>
-        <item name="android:paddingLeft">8sp</item>
-        <item name="android:paddingRight">8sp</item>
-        <item name="android:paddingTop">8sp</item>
-        <item name="android:paddingBottom">8sp</item>
+        <item name="android:padding">@dimen/activity_text_pad</item>
         <item name="android:textSize">20sp</item>
         <item name="android:layout_marginTop">32dp</item>
         <item name="android:layout_marginLeft">32dp</item>
@@ -162,33 +130,16 @@
 
     </style>
 
-    <style name="q03_header">
-        <item name="android:textColor">#FFFFFF</item>
-        <item name="android:background">#9bce35</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:gravity">center_vertical</item>
-        <item name="android:paddingLeft">16sp</item>
-        <item name="android:paddingRight">16sp</item>
-        <item name="android:paddingTop">8sp</item>
-        <item name="android:paddingBottom">8sp</item>
-        <item name="android:textSize">20sp</item>
-    </style>
-
     <style name="help_text03">
-        <item name="android:textColor">#000000</item>
+        <item name="android:textColor">@color/color_text_black</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:gravity">center_vertical</item>
-        <item name="android:paddingLeft">8sp</item>
-        <item name="android:paddingRight">8sp</item>
-        <item name="android:paddingTop">8sp</item>
-        <item name="android:paddingBottom">8sp</item>
+        <item name="android:padding">@dimen/activity_text_pad</item>
         <item name="android:textSize">12sp</item>
         <item name="android:layout_marginLeft">8dp</item>
         <item name="android:layout_marginBottom">0dp</item>
     </style>
-
 
     <style name="q03_checkbox">
         <item name="android:layout_height">wrap_content</item>
@@ -197,21 +148,7 @@
         <item name="android:layout_marginLeft">48dp</item>
         <item name="android:paddingLeft">18dp</item>
         <item name="android:textSize">16sp</item>
-        <item name="android:textColor">#9bce35</item>
-    </style>
-
-    <style name="q04_header">
-        <item name="android:textColor">#FFFFFF</item>
-        <item name="android:background">#EC3539</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:gravity">center_vertical</item>
-        <item name="android:paddingLeft">16sp</item>
-        <item name="android:paddingRight">16sp</item>
-        <item name="android:paddingTop">8sp</item>
-        <item name="android:paddingBottom">8sp</item>
-        <item name="android:layout_marginTop">16dp</item>
-        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/color_green</item>
     </style>
 
     <style name="q04_RadioButton">
@@ -223,23 +160,20 @@
         <item name="android:paddingLeft">16dp</item>
         <item name="android:paddingRight">36dp</item>
         <item name="android:textSize">16sp</item>
-        <item name="android:textColor">#EC3539</item>
+        <item name="android:textColor">@color/color_red</item>
         <item name="android:gravity">center</item>
         <item name="android:button">@drawable/radiobutton_sel_reddot</item>
     </style>
 
-    <style name="q05_header">
-        <item name="android:textColor">#FFFFFF</item>
-        <item name="android:background">#20538D</item>
+    <style name="q04_07_RadioGroup">
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:gravity">center_vertical</item>
-        <item name="android:paddingLeft">16sp</item>
-        <item name="android:paddingRight">16sp</item>
-        <item name="android:paddingTop">8sp</item>
-        <item name="android:paddingBottom">8sp</item>
-        <item name="android:layout_marginTop">16dp</item>
-        <item name="android:textSize">20sp</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:layout_gravity">center_horizontal</item>
     </style>
 
     <style name="q05_RadioButton">
@@ -251,23 +185,20 @@
         <item name="android:paddingLeft">16dp</item>
         <item name="android:paddingRight">36dp</item>
         <item name="android:textSize">16sp</item>
-        <item name="android:textColor">#20538D</item>
+        <item name="android:textColor">@color/color_dark_blue</item>
         <item name="android:gravity">center</item>
         <item name="android:button">@drawable/radiobutton_sel_capricorn</item>
     </style>
 
-    <style name="q06_header">
-        <item name="android:textColor">#FFFFFF</item>
-        <item name="android:background">#01C5F9</item>
+    <style name="q05_06_RadioGroup">
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:gravity">center_vertical</item>
-        <item name="android:paddingLeft">16sp</item>
-        <item name="android:paddingRight">16sp</item>
-        <item name="android:paddingTop">8sp</item>
-        <item name="android:paddingBottom">8sp</item>
-        <item name="android:layout_marginTop">16dp</item>
-        <item name="android:textSize">20sp</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingRight">0dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:layout_gravity">center_horizontal</item>
     </style>
 
     <style name="q06_RadioButton">
@@ -279,7 +210,7 @@
         <item name="android:paddingLeft">16dp</item>
         <item name="android:paddingRight">36dp</item>
         <item name="android:textSize">16sp</item>
-        <item name="android:textColor">#01C5F9</item>
+        <item name="android:textColor">@color/color_light_blue</item>
         <item name="android:gravity">center</item>
         <item name="android:button">@drawable/radiobutton_sel_cancer</item>
     </style>
@@ -306,7 +237,7 @@
         <item name="android:paddingTop">8sp</item>
         <item name="android:paddingLeft">8sp</item>
         <item name="android:paddingRight">16sp</item>
-        <item name="android:textSize">20sp</item>
+        <item name="android:textSize">@dimen/activity_text_size</item>
         <item name="android:paddingBottom">8sp</item>
         <item name="android:layout_marginBottom">8dp</item>
         <item name="android:layout_marginLeft">16dp</item>
@@ -316,42 +247,12 @@
         <item name="android:background">@drawable/radiobutton_sel_08</item>
     </style>
 
-    <style name="q08_header">
-        <item name="android:textColor">#FFFFFF</item>
-        <item name="android:background">#6777CF</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:gravity">center_vertical</item>
-        <item name="android:paddingLeft">16sp</item>
-        <item name="android:paddingRight">16sp</item>
-        <item name="android:paddingTop">8sp</item>
-        <item name="android:paddingBottom">8sp</item>
-        <item name="android:layout_marginTop">16dp</item>
-        <item name="android:textSize">20sp</item>
-    </style>
-
-    <style name="q09_header">
-        <item name="android:textColor">#FFFFFF</item>
-        <item name="android:background">#FECB00</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:gravity">center_vertical</item>
-        <item name="android:paddingLeft">16sp</item>
-        <item name="android:paddingRight">16sp</item>
-        <item name="android:paddingTop">8sp</item>
-        <item name="android:paddingBottom">8sp</item>
-        <item name="android:textSize">20sp</item>
-    </style>
-
     <style name="help_text09">
         <item name="android:textColor">#000000</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:gravity">center_vertical</item>
-        <item name="android:paddingLeft">8sp</item>
-        <item name="android:paddingRight">8sp</item>
-        <item name="android:paddingTop">8sp</item>
-        <item name="android:paddingBottom">8sp</item>
+        <item name="android:padding">@dimen/activity_text_pad</item>
         <item name="android:textSize">12sp</item>
         <item name="android:layout_marginLeft">8dp</item>
         <item name="android:layout_marginBottom">0dp</item>
@@ -377,30 +278,15 @@
         <item name="android:paddingTop">8sp</item>
         <item name="android:paddingLeft">8sp</item>
         <item name="android:paddingRight">16sp</item>
-        <item name="android:textSize">20sp</item>
+        <item name="android:textSize">@dimen/activity_text_size</item>
         <item name="android:paddingBottom">8sp</item>
         <item name="android:layout_marginBottom">8dp</item>
         <item name="android:layout_marginLeft">16dp</item>
         <item name="android:layout_marginRight">16dp</item>
-        <item name="android:textColor">#780124</item>
+        <item name="android:textColor">@color/color_dark_red</item>
         <item name="android:button">@android:color/transparent</item>
         <item name="android:background">@drawable/radiobutton_sel_10</item>
     </style>
-
-    <style name="q10_header">
-        <item name="android:textColor">#FFFFFF</item>
-        <item name="android:background">#780124</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:gravity">center_vertical</item>
-        <item name="android:paddingLeft">16sp</item>
-        <item name="android:paddingRight">16sp</item>
-        <item name="android:paddingTop">8sp</item>
-        <item name="android:paddingBottom">8sp</item>
-        <item name="android:layout_marginTop">16dp</item>
-        <item name="android:textSize">20sp</item>
-    </style>
-
 
 
     <style name="AppTheme.CustomTheme">
