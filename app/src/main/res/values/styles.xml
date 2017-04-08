@@ -288,7 +288,6 @@
         <item name="android:background">@drawable/radiobutton_sel_10</item>
     </style>
 
-
     <style name="AppTheme.CustomTheme">
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowCloseOnTouchOutside">true</item>
