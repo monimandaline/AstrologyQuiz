@@ -26,7 +26,8 @@
             android:id="@+id/user_name"
             android:hint="@string/user_name_hint" />
 
-         <!-- Question 01  -->
+
+        <!-- Question 01  -->
         <TextView
             style="@style/question_header"
             android:background="@color/color_yellow"
@@ -125,6 +126,7 @@
 
         <CheckBox
             style="@style/q03_checkbox"
+            android:layout_marginBottom="@dimen/header_pad_bottom"
             android:id="@+id/q03_Answer_d"
             android:text="@string/q03d"
             android:button="@drawable/checkbox_green"/>
@@ -213,6 +215,8 @@
             android:paddingTop="0sp"
             android:layout_width="fill_parent"
             android:layout_height="300dp"
+            android:scaleX ="1"
+            android:scaleY ="1"
             android:adjustViewBounds="true"
             />
 
@@ -394,6 +398,9 @@
             android:paddingTop="0sp"
             android:layout_width="fill_parent"
             android:layout_height="300dp"
+            android:scaleX ="1"
+            android:scaleY ="1"
+
             android:adjustViewBounds="true"
             />
 
